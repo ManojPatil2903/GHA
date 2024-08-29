@@ -5,6 +5,9 @@ on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./04-using-actions/react-app
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -16,7 +19,8 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-        working-directory: ./04-using-actions/react-app
+      - name: Run Unit Test
+        run: npm run test
 
       # Add any additional steps here
       # For example, running tests:
