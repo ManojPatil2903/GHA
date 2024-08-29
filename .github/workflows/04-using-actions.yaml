@@ -14,7 +14,8 @@ jobs:
                     node-version: '20.x'
                 - name: install dependencies
                   run: npm ci    
-                  working-directory: GHA\04-using-actions\react-app 
+                  working-directory: /home/runner/work/GHA/GHA/GHA/04-using-actions/react-app
+ 
         # checkout the code from repo
         # install dependencies of react application
         # executed automated test
