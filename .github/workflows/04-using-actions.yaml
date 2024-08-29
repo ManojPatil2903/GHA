@@ -1,23 +1,25 @@
-name:  04-using-actions
+name: 04-using-actions
 
 on: workflow_dispatch
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-                - name: checkout code
-                  uses: actions/checkout@v4
-                - name: Setup node
-                  uses: actions/Setup-node@v3
-                  with:
-                    node-version: '20.x'
-                - name: install dependencies
-                  run: npm ci    
-                  working-directory: 04-using-actions\react-app
- 
-        # checkout the code from repo
-        # install dependencies of react application
-        # executed automated test
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-  
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ./04-using-actions/react-app
+
+      # Add any additional steps here
+      # For example, running tests:
+      # - name: Run tests
+      #   run: npm test
+      #   working-directory: ./04-using-actions/react-app
