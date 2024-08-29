@@ -1,0 +1,14 @@
+name: 01-building-block
+
+on: 
+ push:
+ pull_request: 
+ schedule:
+   - cron: '*/5 * * * *'
+
+jobs:
+  echo: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: show the trigger
+        run: echo "i have been trigger by a(n) ${{github.event_name}}"
