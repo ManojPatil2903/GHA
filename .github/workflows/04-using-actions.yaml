@@ -1,0 +1,17 @@
+name:  04-using-actions
+
+on: workflow_dispatch
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+                - name: checkout code
+                  uses: actions/checkout@v4
+                - name: Printing Folders
+                  run: ls 
+        # checkout the code from repo
+        # install dependencies of react application
+        # executed automated test
+
+  
