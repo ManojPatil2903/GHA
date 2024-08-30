@@ -1,0 +1,13 @@
+name: 06 - Contexts
+run-name: ${{github}}
+on: 
+    push: 
+    workflow_dispatch: 
+
+jobs:
+    echo-date:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Information
+              run: |
+               echo "Event Name: ${{github}}"
