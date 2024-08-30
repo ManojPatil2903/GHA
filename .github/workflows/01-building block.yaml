@@ -1,10 +1,8 @@
 name: 01-building-block
 
 on: 
- push:
- pull_request: 
- workflow_dispatch: 
-    
+ workflow_dispatch::
+     
 jobs:
   echo: 
     runs-on: ubuntu-latest
