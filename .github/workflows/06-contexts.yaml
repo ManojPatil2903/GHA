@@ -18,5 +18,5 @@ jobs:
 
             - name: Step 1 - Retive Varibales
               run: |
-               #echo "Variable Value: ${{vars.MY_VAR}}"
+               echo "Variable Value: ${{vars.MY_VAR}}"
               
