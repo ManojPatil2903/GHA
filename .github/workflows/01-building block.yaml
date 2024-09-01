@@ -1,7 +1,7 @@
-name: 01-building-block
+name: 01 - building-block
 
 on: 
- workflow_dispatch::
+ workflow_dispatch:
      
 jobs:
   echo: 
