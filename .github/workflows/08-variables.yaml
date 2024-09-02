@@ -10,10 +10,11 @@ jobs:
         steps:
             - name: Print ENV vaiables
               env:
+                  JOB_VAR : "I am a job env"
                   STEP_VAR: "I am a step env var"
                   STEP_VAR1: "I am a another step env var"
                   
               run: |
+               echo " I am a job env ${{env.JOB_VAR}}"
                echo "step env var :${{env.STEP_VAR}}"
                echo "another step env var :${{env.STEP_VAR1}}"
-               
