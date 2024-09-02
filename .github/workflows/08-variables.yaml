@@ -1,9 +1,5 @@
-name: 08 - Using Expressions
-on: 
-    workflow_dispatch: 
-      
+name: 08-variables
+on: workflow_dispatch
 jobs:
   echo:
     runs-on: ubuntu-latest
-              
-              
