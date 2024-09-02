@@ -1,5 +1,19 @@
-name: 08-variables
-on: workflow_dispatch
+name: 08 -Using Varibales
+
+on: 
+    push: 
+    workflow_dispatch: 
+
 jobs:
-  echo:
-    runs-on: ubuntu-latest
+    echo:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print ENV vaiables
+              env:
+                  STEP_VAR: "I am a step env var"
+                  STEP_VAR1: "I am a another step env var"
+
+
+              run: |
+               echo "step env var :${{env.STEP_VAR}}"
+               echo "another step env var :${{env.STEP_VAR1}}"
