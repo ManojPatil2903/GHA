@@ -1,10 +1,25 @@
-name: 08 - Using Variables
-
-
+name: 07 - Using Expressions
 on: 
-    workflow_dispatch
+    workflow_dispatch: 
+        inputs:
+            debug:
+                type: boolean
+                default: false
+    
+            
 
 jobs:
-    echo:
+    echo-date:
         runs-on: ubuntu-latest
+        steps:
+            - name: '[debug] Print start-up data'
+              if: ${{inputs.debug}}
+              run: |
+                echo "Trigger by ${{ github.event_name}}"
+                echo "Branch: ${{github.ref}}"
+                echo "SHA Commit ${{github.sha}}"
+                echo "Runner ${{runner.os}}"
+                
 
+              
+              
