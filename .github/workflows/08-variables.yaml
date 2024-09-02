@@ -2,7 +2,10 @@ name: 08 -Using Varibales
 
 on: 
     push: 
-    workflow_dispatch: 
+    workflow_dispatch:
+
+env:
+    WORKFLOW_VAR: 'I am a workflow env var'
 
 jobs:
     echo:
@@ -15,6 +18,6 @@ jobs:
                   STEP_VAR1: "I am a another step env var"
                   
               run: |
-               echo " I am a job env ${{env.JOB_VAR}}"
+               echo " job env ${{env.JOB_VAR}}"
                echo "step env var :${{env.STEP_VAR}}"
                echo "another step env var :${{env.STEP_VAR1}}"
