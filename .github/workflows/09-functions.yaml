@@ -10,6 +10,8 @@ jobs:
     steps:
         - name: Failing Step
           run : exit 1
-        #- name: I will be skipped
+        - name: I will be skipped
+          run:
+          if: ${{success()}}
         #- name: I will execute
          
