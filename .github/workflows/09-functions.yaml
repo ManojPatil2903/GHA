@@ -1,13 +1,15 @@
 name: 09 - Using Functions
 
 on: 
+    pull_request: 
     workflow_dispatch:
 
 jobs:
-  echo:
+  echo1:
     runs-on: ubuntu-latest
     steps:
-            - name: Print ENV vaiables
-              run: |
-               echo "welcome" 
-
+        - name: Failing Step
+          run : exit 1
+        #- name: I will be skipped
+        #- name: I will execute
+         
