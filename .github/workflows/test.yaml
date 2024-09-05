@@ -9,6 +9,9 @@ jobs:
         steps:
             - name: test run
               run: echo "welcome"
+        steps:
+            - name: test we
+              run: echo "welcome"
               
         
     
