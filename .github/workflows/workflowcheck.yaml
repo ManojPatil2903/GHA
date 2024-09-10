@@ -1,0 +1,35 @@
+name: exception-check
+on: 
+    workflow_dispatch: 
+        inputs:
+            db_type:
+                type: choice
+                description: provide db details
+                required: true
+                default: RDS
+                options:
+                - RDS
+                - s3
+                - dyanmodb
+                - documentDB
+            table_name:
+                required: true
+                description: provide table name
+                type: string
+
+            account:
+                type: choice
+                description: provide account details
+                required: true
+                default: prod-1
+                options:
+                - prod-1
+                - prod-2
+                - prod-3    
+jobs:
+    print-input:
+        name: print input
+        runs-on: static
+        steps:
+            - name: print input parameter
+              run: echo "${{toJson(github.event.inputs)}}"
