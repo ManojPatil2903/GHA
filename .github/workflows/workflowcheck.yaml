@@ -29,7 +29,7 @@ on:
 jobs:
     print-input:
         name: print input
-        runs-on: static
+        runs-on: ubuntu-latest
         steps:
             - name: print input parameter
               run: echo "${{toJson(github.event.inputs)}}"
